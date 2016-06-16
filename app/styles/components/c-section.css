@@ -1,0 +1,193 @@
+$section-namespace: c-section !default;
+
+@each $text-color, $i in ($secondary-color-07, $secondary-color-08, $secondary-color-04, $secondary-color-04, $secondary-color-04), (1, 2, 3, 4, 5) {
+  [data-section-theme='$(i)'] {
+    .$(section-namespace) {
+      color: $text-color;
+    }
+  }
+}
+
+.$(section-namespace) {
+  &__container {
+    padding: 50px 0;
+    .col__projects & {
+      padding-bottom: 30px;
+      @media (--desktop) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &__content {
+    text-align: center;
+    .c-section-card-type & {
+      padding-bottom: 50px;
+      @media (--desktop) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &__header {
+    @mixin font-settings $font-size-large, 34px, bold, bold;
+    .col__projects & {
+      padding: 0 15px 0 15px;
+    }
+  }
+  &__description {
+    @mixin font-settings $font-size-medium, 24px;
+    .col__projects & {
+      padding-bottom: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      @media (--desktop) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &-box {
+    background: $white;
+    margin:50px 0 50px 0;
+    padding:50px 0 50px 0;
+  }
+  &-box-login,
+  &-box-register{
+    padding:50px 0 10px 0;
+    @media (--desktop) {
+      padding:50px 10% 10px 10%;
+    }
+    .btn {
+      margin-bottom:$font-leading-large;
+    }
+    .h2 {
+      font-size: 25px;
+    }
+  }
+  &-box-login {
+    .btn {
+      margin-bottom:22px;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .c-section-form {
+      .form__group.button__container {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-box-account {
+    .h2 {
+      text-align: center;
+    }
+    .c-section__description {
+      color: $secondary-color-08;
+    }
+    .c-section-box {
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: 0;
+    }
+  }
+
+  &-box__content {
+    padding:0 8%;
+  }
+  &-box-projects{
+    color: $secondary-color-08;
+  }
+
+  /* Login & Registration separator*/
+  &-vertical-separator {
+    @media (--desktop) {
+      margin:110px 0 0 14px;
+      width:1px;
+    }
+
+    p {
+      @media (--desktop) {
+        display: block;
+        width:auto;
+        position:absolute;
+        top: 40%;
+        left: auto;
+        right: auto;;
+        margin:0 0 0 -20px;
+      }
+    }
+  }
+
+  &-login-separator {
+    @media (--desktop) {
+      height: 230px;
+    }
+  }
+
+  &-registration-separator {
+    @media (--desktop) {
+      height: 450px;
+    }
+  }
+}
+
+/* Information section */
+
+.c-information__title--container {
+
+  h1, p {
+    margin:0;
+  }
+  p {
+    @mixin font-settings $font-size-xsmall, ,bold, bold;
+  }
+  h1 {
+    @mixin font-settings $font-size-large, ,bold, bold;
+  }
+  text-transform: uppercase;
+  padding: 50px 0;
+  .c-information__title--information {
+    text-align: right;
+    padding-right: 10px;
+    width: 50%;
+    display:inline-block;
+    border-right: 1px solid;
+  }
+  .c-information__title {
+    padding-left: 10px;
+    width: 50%;
+    display:inline-block;
+
+    .c-section-projects-information & {
+      text-align: center;
+      p {
+        @mixin font-settings $font-size-large, , bold, bold;
+      }
+      span {
+        @mixin font-settings $font-size-xsmall, 20px;
+        display: block;
+      }
+    }
+  }
+}
+
+/* Warning section */
+
+.c-warning--container {
+  /* margin: 0 75px; */
+  .c-warning__icon--container {
+    display: inline-block;
+    width: 10%;
+    .icon {
+      color: $black;
+      font-size: $font-size-mega-large;
+    }
+  }
+  .c-warning__text--container {
+    display: inline-block;
+    width: 88%;
+    .c-warning__text {
+      font-family: $font-family-regular-bold;
+      text-transform: uppercase;
+    }
+  }
+}

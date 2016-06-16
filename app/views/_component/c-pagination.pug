@@ -1,0 +1,29 @@
+mixin c-pagination
+
+  - var totalPages = 4
+  - var pageActive = 2
+  - var lastPage = 7
+
+  .c-pagination
+    ul.c-pagination__list
+      li
+        a.c-pagination__link.c-pagination__link--prev(href="#", title="Previous page")
+          i.icon.icon-arrow-left
+
+      - for (var i = 1; i <= totalPages; i++)
+        if i == pageActive
+          li
+            a.c-pagination__link--active(href="#")= i
+        else
+          li
+            a.c-pagination__link(href="#")= i
+
+      li.is-disabled
+        a.c-pagination__link(href="") &hellip;
+
+      li
+        a.c-pagination__link(href="#")= lastPage
+
+      li
+        a.c-pagination__link.c-pagination__link--next(href="#", title="Next page")
+          i.icon.icon-arrow-right

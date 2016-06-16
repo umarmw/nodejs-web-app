@@ -1,0 +1,53 @@
+extends ../_base/layout.pug
+
+append vars
+  - title = 'Login form Flare Studio'
+
+block content
+
+
+  .row
+    .col-md-1
+    .col-md-10
+      .row.c-section-box.c-section-box-login.text-center
+        .col-md-4
+          h2.h2 Login with
+          button.btn.btn-block.btn--social-icon.btn--twitter
+            i.icon.icon-twitter
+            | Twitter
+          button.btn.btn-block.btn--social-icon.btn--facebook
+            i.icon.icon-facebook
+            | Facebook
+          button.btn.btn-block.btn--social-icon.btn--google
+            i.icon.icon-google
+            | Google
+          .form__group
+            p Sorry, we can't find you.
+            p Don't have an account ?&nbsp;
+              a(href="#").text--red Sign up
+
+        .col-md-1
+          .c-section-vertical-separator.c-section-login-separator
+            p OR
+        .col-md-7
+          h2.h2 Login
+          form.c-section-form.js-login-form(id="login" action="#")
+
+              .form__group
+                label.form__label.sr-only(for="email") Email
+                input.form__input(type="email" id="email" name="email" required data-parsley-required data-parsley-errors-container=".email-error-placeholder" placeholder="Email" data-parsley-required-message="Insert an email address"  data-parsley-type="email" data-parsley-type-message="Enter a valid email" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="255" data-parsley-maxlength-message="Maximum 255 characters")
+                span.form__error.email-error-placeholder
+
+              .form__group
+                label.form__label.sr-only(for="password") Password
+                input.form__input(type="password" id="password" name="password" required data-parsley-type="email" data-parsley-errors-container=".password-error-placeholder" placeholder="Password" data-parsley-required-message="Enter your password" data-parsley-minlength="8" data-parsley-minlength-message="Minimum 8 characters" data-parsley-maxlength="100" data-parsley-maxlength-message="Maximum 100 characters" )
+                span.form__error.password-error-placeholder
+
+              .form__group.button__container
+                button.btn.btn-primary--green.btn-block(type="submit") Log in
+
+              .form__group
+                a(href="#").text--green Forget your password?
+                p Don't have an account ?&nbsp;
+                  a(href="#").text--green Sign up
+    .col-md-1

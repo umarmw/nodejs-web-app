@@ -1,0 +1,26 @@
+body {
+  background-color: $secondary-color-05;
+}
+
+
+@each $background-color, $i in ($secondary-color-04, $secondary-color-05, $primary-color-01, $primary-color-02, $primary-color-03, $secondary-color-06), (1, 2, 3, 4, 5, 6) {
+  [data-section-theme='$(i)'].row {
+    background-color: $background-color;
+  }
+}
+
+[class*='col-'] {
+  &.no-padding {
+    padding-right:0;
+    padding-left:0;
+  }
+}
+
+.container {
+  @media (--all-tablets) {
+    max-width: 1170px;
+  }
+  @media (--desktop) {
+    max-width: 1170px;
+  }
+}

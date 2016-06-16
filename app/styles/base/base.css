@@ -1,0 +1,15 @@
+body {
+  font: normal 100% / normal $default-font-family;
+  text-size-adjust: 100%;  //fix for iOS
+  overflow-x: hidden;
+  font-family: $default-font-family;
+}
+
+p {
+	font-family: $font-family-regular-book;
+	font-size:$font-size-xsmall;
+}
+
+.hidecontent { display:none; }
+
+.error-theme { background: $primary-color-02; }

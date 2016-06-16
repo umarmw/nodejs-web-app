@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-web-app",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Umar Waliyullah (waliyullahu@proximity.bbdo.fr)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "express",
+    "postcss",
+    "webpack"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^2.2.3"
+  },
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "slick-carousel": "~1.5.9",
+    "parsleyjs": "~2.3.11"
+  }
+}

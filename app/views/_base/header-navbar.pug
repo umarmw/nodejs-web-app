@@ -1,0 +1,45 @@
+.row
+  .col-md-1
+  nav.navbar.c-navbar.center(data-navbar-theme='1')
+    //- Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.c-navbar-btn.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false')
+        //- span.sr-only Toggle navigation
+        //- span.icon-bar
+        i.icon.icon-menu
+        i.icon.icon-cancel
+        span.c-navbar-btn__text MENU
+      a.navbar-brand.hidden-lg.c-navbar-brand(href='#')
+        img.logo-mobile.img-responsive(src='../../../images/flare-studio-mobile-logo.svg' alt='logo' width='50' height='50')
+        img.logo.img-responsive(src='../../../images/flare-studio-logo.svg' alt='logo' width='350' height='90')
+    #navbar.collapse.navbar-collapse
+      .c-nav__section.col-md-3
+        ul.nav.navbar-nav.navbar-left
+          li.nav__item
+            a.header__item-link(href='#')
+              span.header__item-link__text Projects
+          li.nav__item
+            a.header__item-link(href='#')
+              span.header__item-link__text Winners
+      .c-nav__section.col-md-3
+        ul.nav.navbar-nav.navbar-right
+          li.nav__item
+            a.header__item-link(href='#')
+              span.header__item-link__text My Projects
+          //- li.nav__item
+          //-   a.header__item-link(href='#') My Account
+          li.nav__item.dropdown
+            a.dropdown-toggle.header__item-link(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+              i.icon.icon-person
+              span.nav__item--text
+                span.header__item-link__text Paula
+              //- span.caret
+            ul.dropdown-menu.c-dropdown-menu
+              li.nav__subitem
+                a.header__item-link(href='#')
+                  span.nav__subitem--text My Account
+              li.nav__subitem
+                a.header__item-link(href='#')
+                  span.nav__subitem--text Logout
+                  i.icon.icon-logout
+  .col-md-1

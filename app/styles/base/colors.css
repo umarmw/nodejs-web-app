@@ -1,0 +1,62 @@
+/* ============================================
+Description: Styles for all colors used on the website
+Version: 1.0.0
+Last update: 29/04/2016
+
+Summary:
+
+1. blank and white variations
+2. color-primary
+
+============================================
+
+1. blank and white variations
+========================================================================== */
+
+$black: #000 !default;
+$white: #fff !default;
+
+/*// - Primary base colors*/
+
+$primary-color-01: #DDFF2B;   /*Lime*/ /* Data theme 3 */
+$primary-color-02: #78F696;   /*Green*/ /* Data theme 4 */
+$primary-color-03: #33CCFF;   /*Blue*/ /* Data theme 5 */
+
+/*// - Secondary colors*/
+
+$secondary-color-01 : #B8D524;  /*Dark lime*/
+$secondary-color-02 : #62C87A;  /*Dark green*/
+$secondary-color-03 : #69A1D9;  /*Dark blue*/
+$secondary-color-04 : #333333;  /*Gray - Use for background main color*/ /* Data theme 1 */
+$secondary-color-05 : #454545;  /*Light gray Use for background main color inside components - banners, sections etc*/ /* Data theme 2 */
+$secondary-color-06 : #666666;  /*Lighter gray version 1*/
+$secondary-color-07 : #999999;  /*Lighter gray version 2*/
+$secondary-color-08 : #CCCCCC;  /*Lighter gray version 3*/
+$secondary-color-09 : #222222;  /*Light Black*/
+
+/*// - alert and notification colors, Success, Errors, Warning*/
+
+
+/*// - Helper colors*/
+
+$color-grey   : #666;
+$color-grey-b : #f2f2f2;
+$color-purple : #6e1e52;
+$color-pink   : #b7235a;
+$color-orange : #f3883c;
+$color-yellow : #f7d8a7;
+$color-primary-blue: #54ACEC;
+$color-secondary-blue: #3B589E;
+$color-red: #F8362C;
+$color-light-lime: #00F995;
+
+/* Alert color */
+$color-alert: #b94a48;
+
+
+/*// - Pagination*/
+
+
+/*// - navbar and subnav
+
+// - Other*/

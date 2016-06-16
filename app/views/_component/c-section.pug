@@ -1,0 +1,28 @@
+mixin c-section(options)
+
+  - theme = options.theme || 'gray'; // lime, green, blue, gray
+  - title = options.title || '';
+  - description = options.description || '';
+  - sectionClass = 'c-section--' + theme;
+  - button = options.button || '';
+  - buttonCategory = options.buttonCategory || 'primary';
+  - buttonColor = options.buttonColor || 'lime';
+
+  section.c-section(class=sectionClass)
+    .c-section__container.row
+      .col-md-1
+      .col-md-10
+        .row
+          .c-section__content.col-md-12
+            if title
+              h2.c-section__header #{title}
+            if button
+              .c-section__button
+                a.btn( href="#" class='btn-' + buttonCategory + '--' + buttonColor)
+                  | #{button}
+            if description
+              p.c-section__description #{description}
+
+          .c-section__content.col-md-12
+            block
+      .col-md-1

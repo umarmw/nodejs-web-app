@@ -1,0 +1,44 @@
+mixin c-banner(options)
+
+  - type = options.type || 'top';
+  - title = options.title || '';
+  - subtitle = options.subtitle || '';
+  - text = options.text || '';
+  - image = options.image || '';
+  - video = options.video || '';
+  - padding = options.padding || true;
+  - buttonText = options.buttonText || '';
+  - buttonClass = options.buttonClass || '';
+  - bannerClass = options.bannerClass || '';
+
+  .row(class = bannerClass)
+    .col-md-12(class=(padding == true ? 'no-padding': ''))
+      .c-banner(class='c-banner--' + type)
+        if type == 'video'
+          .c-banner__container
+            .c-banner__content
+              .c-banner__text-container.js-video-banner-title
+                if title
+                  h1.c-banner__title #{title}
+                if subtitle
+                  h2.c-banner__subtitle #{subtitle}
+            .c-banner__content
+              .c-banner__video-container
+                button(aria-label='Play video').btn--video-play.js-play-video
+                  span.play-button
+                video.c-banner__video.js-banner-video(width='1170', poster='../../../images/banner/video/video-poster-' + video + '.jpg')
+                  source(src='../../../images/tmp/video/video-' + video + '.mp4')
+        if type == 'button'
+          .row.c-banner__container
+            .col-md-8.c-banner__content
+              .c-banner__text-container
+                if title
+                  h1.c-banner__title #{title}
+                if subtitle
+                  h2.c-banner__subtitle #{subtitle}
+                if text
+                  p.c-banner__text #{text}
+            .col-md-4.c-banner__content
+              .c-banner__button-container
+                .btn.btn-tertiary(class = buttonClass)
+                  | !{buttonText}

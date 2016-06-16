@@ -1,0 +1,82 @@
+$banner-namespace: c-banner !default;
+
+.$(banner-namespace) {
+  display: inline-block;
+  width: 100%;
+}
+
+.$(banner-namespace)--video {
+  .$(banner-namespace) {
+    &__text-container {
+      padding: 40px 15px 20px;
+      @media (--landscape-tablets) {
+        bottom: 25px;
+        left: 35px;
+      }
+      @media (--desktop) {
+        position: absolute;
+        max-width: 510px;
+        bottom: 60px;
+        left: 100px;
+        padding: 0;
+        z-index: 2;
+      }
+    }
+
+    &__video-container {
+      position: relative;
+    }
+
+    &__title {
+      @mixin font-settings $font-size-medium, 24px, bold, bold;
+      color: $white;
+      margin: 0;
+      @media (--desktop) {
+        @mixin font-settings $font-size-large, 34px, bold, bold;
+      }
+    }
+
+    &__subtitle {
+      @mixin font-settings $font-size-large, 34px, bold, bold;
+      color: $primary-color-01;
+      margin: 0;
+      @media (--desktop) {
+        @mixin font-settings $font-size-mega-large, 60px, bold, bold;
+      }
+    }
+
+    &__video {
+      width: 100%;
+    }
+  }
+}
+
+.$(banner-namespace)--button {
+  padding: 20px;
+  @media (--all-tablets) {
+    padding: 80px;
+  }
+  @media (--desktop) {
+    padding: 50px 100px;
+  }
+  .$(banner-namespace) {
+    &__text {
+      font-size: $font-size-xsmall;
+    }
+
+    &__title {
+      @mixin font-settings $font-size-large, 34px, bold, bold;
+      color: $white;
+      margin: 0;
+    }
+
+    &__subtitle {
+      @mixin font-settings $font-size-mega-large, 60px, bold, bold;
+      color: $primary-color-01;
+      margin: 0;
+    }
+    &__button-container {
+      text-align: right;
+    }
+  }
+}

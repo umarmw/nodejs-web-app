@@ -1,0 +1,125 @@
+extends ../_base/layout.pug
+
+append vars
+  - title = 'Registration form Flare Studio'
+
+block content
+
+
+  .row
+    .col-md-1
+    .col-md-10
+      .row.c-section-box.c-section-box-register.text-center
+        .col-md-4
+          h2.h2 Register with
+          .button__container
+            button.btn.btn-block.btn--social-icon.btn--twitter
+              i.icon.icon-twitter
+              | Twitter
+            button.btn.btn-block.btn--social-icon.btn--facebook
+              i.icon.icon-facebook
+              | Facebook
+            button.btn.btn-block.btn--social-icon.btn--google
+              i.icon.icon-google
+              | Google
+
+        .col-md-1
+          .c-section-vertical-separator.c-section-registration-separator
+            p OR
+        .col-md-7
+          h2.h2 Register
+          form.c-section-form.js-registration-form(id="register" action="#")
+
+              .row
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="firstname") First Name
+                    input.form__input.js-first-name-field(type="text" id="firstname" name="firstname" required data-parsley-required data-parsley-required-message="Please insert your First Name" data-parsley-errors-container=".firstname-error-placeholder" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="100" data-parsley-maxlength-message="Maximum 100 characters"  placeholder="Firstname*")
+                    span.form__error.firstname-error-placeholder
+
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="lastname") Last Name
+                    input.form__input.js-last-name-field(type="text" id="lastname" name="lastname" required data-parsley-required data-parsley-required-message="Please insert your Last Name"  data-parsley-errors-container=".lastname-error-placeholder" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="100" data-parsley-maxlength-message="Maximum 100 characters"  placeholder="Lastname*")
+                    span.form__error.lastname-error-placeholder
+
+              .row
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="primaryrole") Primary Role
+                    select.form__input.js-primary-role-field(id="primaryrole" name="primaryrole" required data-parsley-required data-parsley-required-message="Please insert Primary Role" data-parsley-errors-container=".primaryrole-error-placeholder")
+                      option(value="") Role*
+                      option(value="Director") Director
+                    span.form__error.primaryrole-error-placeholder
+
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="secondaryrole") Secondary Role
+                    select.form__input.js-secondary-role-field(id="secondaryrole" name="secondaryrole"  data-parsley-errors-container=".secondaryrole-error-placeholder")
+                      option(value="") Secondary role
+                      option(value="Director") Director
+                    span.form__error.secondaryrole-error-placeholder
+
+              .row
+                .col-md-6
+                  .form__group
+                      label.form__label.sr-only(for="registerModel_City") City
+                      input.form__input.js-city-field(id="registerModel_City" name="registerModel_City" required data-parsley-required  data-parsley-required-message="City is a required field" data-parsley-errors-container=".city-error-placeholder" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="255" data-parsley-maxlength-message="Maximum 255 characters"  placeholder="City*" autocomplete="on")
+                      span.form__error.city-error-placeholder
+
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="dateofbirth") Date of Birth
+                    input.form__input.js-dob-field(type="date" id="dateofbirth" name="dateofbirth" required data-parsley-required data-parsley-required-message="Please insert your Date of Birth" data-parsley-errors-container=".dateofbirth-error-placeholder" placeholder="Date of birth* DD|MM|YY")
+                    span.form__error.dateofbirth-error-placeholder
+
+              .row
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="email") Email
+                    input.form__input.js-email-field(type="email" id="email" name="email" required data-parsley-required data-parsley-required-message="Insert an email address"  data-parsley-type="email" data-parsley-type-message="Enter a valid email" data-parsley-errors-container=".email-error-placeholder" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="255" data-parsley-maxlength-message="Maximum 255 characters" placeholder="Email address*")
+                    span.form__error.email-error-placeholder
+
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="emailconfirmation") Email Confirmation
+                    input.form__input.js-confirm-email-field(type="email" id="emailconfirmation" name="emailconfirmation" required data-parsley-required data-parsley-required-message="Insert an email address" data-parsley-type="email" data-parsley-type-message="Enter a valid email" data-parsley-errors-container=".emailconfirmation-error-placeholder" data-parsley-equalto=".js-email-field" data-parsley-equalto-message="The emails are not similar" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="255" data-parsley-maxlength-message="Maximum 255 characters"  placeholder="Confirm email address*")
+                    span.form__error.emailconfirmation-error-placeholder
+
+              .row
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="password") Password
+                    input.form__input.js-password-field(type="password" id="password" name="password" required data-parsley-required data-parsley-required-message="Enter your password" data-parsley-errors-container=".password-error-placeholder" data-parsley-minlength="8" data-parsley-minlength-message="Minimum 8 characters" data-parsley-maxlength="100" data-parsley-maxlength-message="Maximum 100 characters" placeholder="Password")
+                    span.form__error.password-error-placeholder
+
+                .col-md-6
+                  .form__group
+                    label.form__label.sr-only(for="passwordconfirmation") Password Confirmation
+                    input.form__input.js-confirm-password-field(type="password" id="passwordconfirmation" name="passwordconfirmation" required data-parsley-required data-parsley-required-message="Enter your password" data-parsley-errors-container=".passwordconfirmation-error-placeholder" data-parsley-equalto=".js-password-field" data-parsley-equalto-message="The passwords are not similar" data-parsley-minlength="8"  data-parsley-minlength-message="Minimum 8 characters" data-parsley-maxlength="100"  data-parsley-maxlength-message="Maximum 100 characters" placeholder="Confirm password*")
+                    span.form__error.passwordconfirmation-error-placeholder
+
+              .row
+                .col-md-12
+                  .form__group
+                    label.form__label.sr-only(for="description") Description
+                    input.form__input.js-description-field(type="text" id="description" name="description" data-parsley-errors-container=".description-error-placeholder" data-parsley-minlength="2" data-parsley-minlength-message="Minimum 2 characters" data-parsley-maxlength="100" data-parsley-maxlength-message="Maximum 100 characters" placeholder="Work for a production company? If yes tell us the name")
+                    span.form__error.description-error-placeholder
+
+              .row
+                .col-md-10.col-md-offset-1
+                  .form__group
+                    .g-recaptcha(data-sitekey="6LcRbB8TAAAAAPUSfFe49zUxHOVUNBzFoapAtHDj" style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;" )
+
+              .row
+                .col-md-12
+                  .form__group--checkbox
+                    input.form__input--checkbox(type="checkbox" name="confirmation" id="confirmation" required data-parsley-required data-parsley-required-message="Please accept T & C" data-parsley-errors-container=".description-error-placeholder")
+                    label.form__label--checkbox.js-terms-field(for="confirmation") By signing up I confirm that I'm over 18, and agree to the&nbsp;
+                      a(href="#") Terms & Conditions.
+                    span.form__error.description-error-placeholder
+
+              .form__group
+                button.btn.btn-primary--green.btn-block(type="submit") Register
+
+    .col-md-1

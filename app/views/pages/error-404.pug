@@ -1,0 +1,83 @@
+extends ../_base/layout.pug
+
+append vars
+  - title = 'Error 404'
+
+block content
+
+  .l-page--error-404
+
+    .row(data-section-theme=4)
+      .col-md-12
+        +c-section({
+          title: 'SORRY',
+          description: 'WE CAN\'T LOCATE THE CONTENT YOU\'RE LOOKING FOR.'
+        })
+
+    .row(data-section-theme=1)
+      .col-md-12.col__error-404
+        +c-section({
+          title: 'BUT MAY WE RECOMEND...'
+        })
+          .row.card__row
+            .col-md-4
+              +c-card({
+                type: 'case-study',
+                theme: '1',
+                title:'DOLOR SIT AMET',
+                subtitle: 'LOREM IPSUM',
+                descriptionInformation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid...",
+                image: '01',
+                CTA: 'SEE CASE STUDY'
+              })
+            .col-md-4
+              +c-card({
+                type: 'case-study',
+                theme: '2',
+                title:'DOLOR SIT AMET',
+                subtitle: 'LOREM IPSUM',
+                descriptionInformation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid...",
+                image: '02',
+                CTA: 'SEE CASE STUDY'
+              })
+            .col-md-4
+              +c-card({
+                type: 'case-study',
+                theme: '3',
+                title:'DOLOR SIT AMET',
+                subtitle: 'LOREM IPSUM',
+                descriptionInformation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid...",
+                image: '03',
+                CTA: 'SEE CASE STUDY'
+              })
+          //- .row.card__row
+          //-   .col-md-4
+          //-     +c-card({
+          //-       type: 'project',
+          //-       theme: '1',
+          //-       title:'DOLOR SIT AMET',
+          //-       subtitle: 'LOREM IPSUM',
+          //-       descriptionInformation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid...",
+          //-       image: '01',
+          //-       CTA: 'FIND OUT MORE'
+          //-     })
+          //-   .col-md-4
+          //-     +c-card({
+          //-       type: 'project',
+          //-       theme: '2',
+          //-       title:'DOLOR SIT AMET',
+          //-       subtitle: 'LOREM IPSUM',
+          //-       descriptionInformation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid...",
+          //-       image: '02',
+          //-       CTA: 'FIND OUT MORE'
+          //-     })
+          //-   .col-md-4
+          //-     +c-card({
+          //-       type: 'project',
+          //-       theme: '3',
+          //-       title:'DOLOR SIT AMET',
+          //-       subtitle: 'LOREM IPSUM',
+          //-       descriptionInformation: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid...",
+          //-       image: '03',
+          //-       CTA: 'FIND OUT MORE'
+          //-     })

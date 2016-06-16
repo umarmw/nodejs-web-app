@@ -1,0 +1,245 @@
+$card-mini-namespace: c-mini-card !default;
+
+.$(card-mini-namespace) {
+  margin: 25px 0;
+  padding: 0 35%;
+  @media (--desktop) {
+    padding: 0;
+  }
+  &__content { /* The Container */
+    @extend .text-center;
+  	color: $black;
+  	&__title {
+      h3 {
+        font-size: $font-size-small;
+        text-transform: uppercase;
+      }
+		}
+		&__description { /* Description */
+			font-size: $font-size-xsmall;
+      p {
+        line-height: $font-size-medium;
+      }
+  	}
+  }
+  &_image__container {
+    @media (--desktop) {
+      margin-bottom: 20px;
+    }
+
+    .icon {
+      font-size: 80px;
+      color: $secondary-color-05;
+    }
+  }
+}
+.row.mini-card__row {
+  @media (--desktop) {
+    margin: 0 0 45px;
+  }
+}
+.row.card__row, .benefit__row {
+  @media (--desktop) {
+    margin: 45px 0;
+  }
+}
+
+
+@each $card-color, $i in ($primary-color-01, $primary-color-02, $primary-color-03), (1, 2, 3) {
+  [data-theme='$(i)'][data-card-type='card--level'].c-card {
+    & .c-card__title--container {
+      background-color: $card-color;
+    }
+    & .c-card__description{
+      color: $card-color;
+      h3 {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+  [data-theme='$(i)'][data-card-type='card--case-study'],
+  [data-theme='$(i)'][data-card-type='card--project'] {
+    .c-card__title {
+      color: $card-color;
+      border-bottom: 1px solid $card-color;
+      padding: 0 0 25px;
+    }
+
+    .btn--video-play {
+      &:hover {
+        .play-button {
+          background-color: $card-color;
+          &:after {
+            border-left-color: $secondary-color-04;
+          }
+        }
+      }
+      .play-button {
+        border: 3px solid $card-color;
+        &:after {
+          border-left: 20px solid $card-color;
+        }
+      }
+    }
+  }
+}
+
+.col__error-404,
+.col__projects {
+  & .c-card {
+    margin-bottom: 25px;
+    @media (--desktop) {
+      margin-bottom: 0;
+    }
+  }
+  &__header {
+    h2 {
+      color: $white;
+    }
+  }
+}
+
+
+[data-card-type='card--level'] {
+  height: 480px;
+  margin: 50px 0;
+  @media (--portrait-tablets) {
+    height: auto;
+    padding: 0 20%;
+  }
+  @media (--desktop) {
+    margin: 0;
+  }
+  .c-card__title--container {
+    padding: 20px 10px;
+
+    .c-cart__title--information {
+      color: $secondary-color-04;
+      width: 48%;
+      display:inline-block;
+      .card__paragraph {
+        font-weight: $font-weight-bold;
+        text-align: right;
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+    }
+    .c-cart__title {
+      color: $secondary-color-04;
+      width: 50%;
+      display: inline-block;
+      border-left: 1px solid;
+      h3 {
+        text-align: left;
+        font-weight: $font-weight-bold;
+        margin: 0 0 0 10px;
+      }
+    }
+  }
+  .c-card__picture {
+    @media (--portrait-tablets) {
+      height: auto;
+    }
+    @media (--desktop) {
+      height: 220px;
+    }
+    img {
+      @media (--desktop) {
+        height: 100%;
+      }
+    }
+  }
+  .c-card__description--container {
+    display: inline-block;
+    color: $secondary-color-08;
+    background-color: $secondary-color-06;
+    height: 160px;
+    padding: 0 10px 10px;
+    @media (--landscape-tablets) {
+      height: 180px;
+    }
+    .c-card__description {
+      margin: 10px 0;
+      h2 {
+        margin: 0;
+      }
+
+    }
+    .c-card__description--information {
+      .card__paragraph {
+        font-family: $font-family-regular-book;
+        line-height: $font-leading-normal;
+      }
+    }
+  }
+}
+
+[data-card-type='card--project'] {
+  .c-card__textual {
+    text-align: left;
+    padding: 30px;
+    background-color: $color-grey;
+  }
+  .c-card__subtitle {
+    color: $white;
+    @mixin font-settings $font-size-xsmall, 10px, bold, bold;
+  }
+  .c-card__title {
+    @mixin font-settings $font-size-medium, 10px, bold, bold;
+  }
+  .c-card__description {
+    color: $white;
+  }
+  .c-card__btn {
+    width: 100%;
+  }
+}
+[data-card-type='card--case-study'] {
+  .c-card__visual {
+    background: $secondary-color-06;
+  }
+  .c-card__textual {
+    text-align: left;
+    padding: 30px;
+    background-color: $color-grey;
+  }
+  .c-card__subtitle {
+    color: $white;
+    @mixin font-settings $font-size-xsmall, 10px, bold, bold;
+  }
+  .c-card__title {
+    @mixin font-settings $font-size-medium, 10px, bold, bold;
+  }
+  .c-card__description {
+    color: $white;
+  }
+  .c-card__btn {
+    width: 100%;
+  }
+  .c-card__video-container {
+    position: relative;
+    top: 3px;
+    .c-card__video {
+      width: 100%;
+      object-fit: inherit;
+      @media (--desktop) {
+        height: 214px;
+      }
+    }
+    .c-section__content & {
+      text-align: initial;
+    }
+  }
+}
+
+[data-card-type='card--benefits'] {
+  @media (--desktop) {
+    margin: 25px;
+  }
+  .c-mini-card_image__container {
+    @media (--desktop) {
+      margin: 0;
+      padding: 20px 75px;
+    }
+  }
+}

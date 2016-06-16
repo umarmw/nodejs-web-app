@@ -1,0 +1,169 @@
+extends ../_base/layout.pug
+
+append vars
+  - title = 'Landing Umbraco in HOME'
+
+block content
+
+  // placeholder for video banner
+  .row(data-section-theme=2)
+    .col-md-12
+      +c-banner({
+        type: 'video',
+        title: 'WELCOME TO CANVAS',
+        subtitle: 'THE PLATFORM FOR CONTENT CREATION',
+        padding: false,
+        video: '01'
+      })
+
+  // placeholder for taglines
+  .row(data-section-theme=2)
+    .col-md-12
+      +c-section({})
+        +c-feature-text({
+          textArray: { '1': { 'text': 'WE CONNECT', 'type': 'normal' }, '2': { 'text': ['GLOBAL BRANDS'], 'type': 'alternate' }, '3': { 'text': 'AND', 'type': 'normal' }, '4': { 'text': ['FILM MAKERS'], 'type': 'alternate' }, '5': { 'text': 'TO CREATE', 'type': 'normal' }, '6': { 'text': ['AMAZING'], 'type': 'alternate' }, '7': { 'text': 'CONTENT', 'type': 'normal' } },
+          theme: '2',
+          animated: true
+        })
+
+  // How it works
+  .row(data-section-theme=3)
+    .col-md-12
+      +c-section({
+        title: 'HOW IT WORKS'
+      })
+      .row.mini-card__row
+        .col-md-1
+        .row
+          .col-md-2
+            +c-mini-card({
+              title: 'Register',
+              description:'Create an account to access projects',
+              type:'how-to',
+              image: 'pencil'
+            })
+          .col-md-2
+            +c-mini-card({
+              title: 'Browse',
+              description:'Search projects by type and category',
+              type:'how-to',
+              image: 'magnifying-glass'
+            })
+          .col-md-2
+            +c-mini-card({
+              title: 'Join Project',
+              description:'Choose a project and start working',
+              type:'how-to',
+              image: 'bulb'
+            })
+          .col-md-2
+            +c-mini-card({
+              title: 'Submit Work',
+              description:'Submit your work and wait for feedback',
+              type:'how-to',
+              image: 'upload'
+            })
+          .col-md-2
+              +c-mini-card({
+                title: 'Reward',
+                description:'Receive a reward for the work done',
+                type:'how-to',
+                image: 'pound'
+              })
+        .col-md-1
+
+  // One platform
+  .row(data-section-theme=1)
+    .col-md-12
+      +c-section({
+        title: 'ONE PLATFORM FOR ALL LEVELS',
+        description: 'On registration everyone will be based in OPEN STUDIO and have access to all briefs in this level. Users have the ability to move up and gain access to Plus and Pro briefs by either actively working on the platform or sharing their showreel to the Flare.Studio team'
+      })
+        .row.card__row
+          .col-md-4
+            +c-card({
+              type: 'level',
+              theme: '1',
+              title:'OPEN STUDIO',
+              titleInformation: 'START YOUR JOURNEY',
+              description: 'OPEN TO ALL',
+              descriptionInformation: "Respond to briefs and get paid if your work is chosen. If you don't, you can still benefit from our fundation opportunities",
+              image: '01'
+
+            })
+          .col-md-4
+            +c-card({
+              type: 'level',
+              theme: '2',
+              title:'STUDIO PLUS',
+              titleInformation: 'BUILD YOUR REEL FURTHER',
+              description: 'FOR THE EXPERIENCED',
+              descriptionInformation: "Enter Studio Plus for bigger budgets, pitch your ideas and get a production budget to make your content",
+              image: '02'
+            })
+          .col-md-4
+            +c-card({
+              type: 'level',
+              theme: '3',
+              title:'STUDIO PLUS',
+              titleInformation: 'FOR THE EXPERIENCED',
+              description: 'OPEN TO ALL',
+              descriptionInformation: "Enter the Studio Plus briefs for bigger budgets, pitch your ideas and get a production budget to make your content",
+              image: '03'
+            })
+
+  // Benefits
+  .row(data-section-theme=4)
+    .col-md-12
+      +c-section({
+        title: 'THE BENEFITS OF CANVAS'
+      })
+        .benefit__row
+          .row
+            .col-md-4
+              +c-mini-card({
+                description:"Get paid to produce content for the world's leading brands",
+                type:'benefits',
+                image: 'pound'
+              })
+            .col-md-4
+              +c-mini-card({
+                description:"Work with industry producers to create the content you want to see",
+                type:'benefits',
+                image: 'person'
+              })
+            .col-md-4
+              +c-mini-card({
+                description:"Attend workshops and events with leading industry figures",
+                type:'benefits',
+                image: 'calendar'
+              })
+          .row
+            .col-md-4
+              +c-mini-card({
+                description:'Enter contests to earn credits to buy kit and other rewards',
+                type:'benefits',
+                image: 'lamp'
+              })
+            .col-md-4
+              +c-mini-card({
+                description:'Enter contests to earn credits to buy kit and other rewards',
+                type:'benefits',
+                image: 'globe'
+              })
+            .col-md-4
+              +c-mini-card({
+                description:'Build your profile to access bigger projects and budgets',
+                type:'benefits',
+                image: 'badge'
+              })
+
+  // placeholder for register
+  .row(data-section-theme=2).register__container
+    .col-md-12
+      +c-section({
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+        button: 'Register as a professional',
+        buttonCategory: 'primary',
+        buttonColor: 'green'
+      })

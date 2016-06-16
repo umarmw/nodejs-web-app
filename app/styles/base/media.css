@@ -1,0 +1,33 @@
+/* Mobile */
+$mobile-device-width-min: 320px;
+$mobile-device-width-max: 480px;
+
+/* Tablet  and Desktop*/
+$tablet-device-width-min: 769px;
+$tablet-device-width-max: 1023px;
+$desktop-device-width-min: 1024px;
+
+/* Small Tablet Portrait */
+$small-tablet-portrait-device-width-min: 768px; /*Fix made to resolve conflicts betweetn landscape phones and portrait tablets */
+
+/* Big Tablet - mainly for samsung tablets */
+$big-tablet-device-width-min: 800px;
+$max-device-width: 1110px;
+
+@custom-media --desktop (min-width: $desktop-device-width-min);
+
+/* Phones */
+@custom-media --portrait-phones (max-width: $mobile-device-width-min);
+@custom-media --landscape-phones (min-width: $mobile-device-width-max) and (max-width: $tablet-device-width-min);
+@custom-media --all-phones only screen and (max-width: $mobile-device-width-max);
+
+/* Tablets */
+@custom-media --portrait-tablets (min-width: $mobile-device-width-max) and (max-width: $tablet-device-width-min);
+@custom-media --landscape-tablets (min-width: $tablet-device-width-min) and (max-width: $desktop-device-width-min);
+@custom-media --all-tablets (min-width: $mobile-device-width-max) and (max-width: $desktop-device-width-min);
+
+/* Big Tablets */
+@custom-media --big-tablets (min-width: $big-tablet-device-width-min) and (max-width: $tablet-device-width-max);
+
+/* Small Tablets */
+@custom-media --small-tablets-portrait only screen and (min-width: $small-tablet-portrait-device-width-min) and (max-width: $tablet-device-width-min);

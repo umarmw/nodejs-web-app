@@ -1,0 +1,17 @@
+mixin c-mini-card(options)
+
+  - title = options.title || '';
+  - description = options.description || 'description';
+  - type = options.type || 'benefits';
+  - image = options.image || '';
+  - imagePath = '../../../images/tmp/mini-card/'+type+'/';
+
+  .c-mini-card(data-card-type='card--'+type)
+    .c-mini-card_image__container.text-center
+      img.card__image.img-responsive(src=imagePath + image +".svg" alt="card image" height="120" width="120")
+    .c-mini-card__content
+      if title != ''
+        .c-mini-card__content__title
+          h3 #{title}
+      .c-mini-card__content__description
+        p #{description}

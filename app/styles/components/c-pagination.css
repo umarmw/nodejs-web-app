@@ -1,0 +1,60 @@
+.c-pagination {
+  &__list {
+    display: inline-block;
+    overflow: hidden;
+    @mixin font-settings $font-size-xsmall, 10px, bold, bold;
+
+    li {
+      float: left;
+      display: inline-block;
+      list-style: none;
+      margin-left: 2px;
+      vertical-align: top;
+
+      a {
+        display: inline-block;
+        line-height: 18px;
+        width: 25px;
+        padding: 3px 8px 3px 8px;
+        text-decoration: none;
+        color: $primary-color-01;
+
+        &:hover {
+          width: 25px;
+          color: $secondary-color-04;
+          background: $primary-color-01;
+          border-radius: 15px;
+        }
+
+        .icon {
+          font-size: $font-size-medium;
+          color: $primary-color-01;
+        }
+      }
+
+      a.c-pagination__link--prev,
+      a.c-pagination__link--next {
+        &:hover {
+          background: transparent;
+        }
+      }
+
+      .c-pagination__link--active {
+        width: 25px;
+        color: $secondary-color-04;
+        background: $primary-color-01;
+        border-radius: 15px;
+      }
+    }
+
+    .is-disabled {
+      a {
+        &:hover {
+          background: transparent;
+          color: $primary-color-01;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

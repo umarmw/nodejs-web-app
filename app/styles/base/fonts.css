@@ -1,0 +1,72 @@
+/* 1. font-family
+// ==========================================================================
+// - Futura LT Bold Pro
+// - Futura LT Pro Medium
+// - Futura LT Pro Book
+
+// - Futura LT Bold Pro -> To replace the fonts when receiving the correct ones from market
+*/
+ /* TO DO - VERY IMPORTANT */
+@font-face {
+  font-family: 'Futura_Bold_Pro';
+  src: url('../../../fonts/FuturaBold/FuturaLTPro-Bold.eot');
+  src: url('../fonts/FuturaBold/FuturaLTPro-Bold.eot') format('embedded-opentype'),
+    url('../fonts/FuturaBold/FuturaLTPro-Bold.woff') format('woff'),
+    url('../fonts/FuturaBold/FuturaLTPro-Bold.ttf') format('truetype'),
+    url('../fonts/FuturaBold/FuturaLTPro-Bold.svg#FuturaLTPro-Bold') format('svg');
+}
+
+/* - Futura LT Pro Medium -> To replace the fonts when receiving the correct ones from market */
+@font-face {
+  font-family: 'Futura_Pro_Medium';
+  src: url('../fonts/FuturaMedium/FuturaLTPro-Medium.eot');
+  src: url('../fonts/FuturaMedium/FuturaLTPro-Medium.eot') format('embedded-opentype'),
+    url('../fonts/FuturaMedium/FuturaLTPro-Medium.woff') format('woff'),
+    url('../fonts/FuturaMedium/FuturaLTPro-Medium.ttf') format('truetype'),
+    url('../fonts/FuturaMedium/FuturaLTPro-Medium.svg#manhattandarling-regular') format('svg');
+}
+
+/* - Futura LT Pro Book -> To replace the fonts when receiving the correct ones from market */
+@font-face {
+  font-family: 'Futura_Pro_Book';
+  src: url('../fonts/FuturaMacroBook/FuturaLTPro-Book.eot');
+  src: url('../fonts/FuturaMacroBook/FuturaLTPro-Book.eot') format('embedded-opentype'),
+    url('../fonts/FuturaMacroBook/FuturaLTPro-Book.woff') format('woff'),
+    url('../fonts/FuturaMacroBook/FuturaLTPro-Book.ttf') format('truetype'),
+    url('../fonts/FuturaMacroBook/FuturaLTPro-Book.svg#FuturaLTPro-Book') format('svg');
+}
+
+$default-font-family: 'Futura_Bold_Pro', Arial, sans-serif;
+
+$font-family-regular-bold: 'Futura_Bold_Pro', Arial, sans-serif;
+$font-family-regular-medium: 'Futura_Pro_Medium', Arial, sans-serif;
+$font-family-regular-book: 'Futura_Pro_Book', Arial, sans-serif;
+
+$sans-font-family: Arial, sans-serif !default;
+$serif-font-family: "Trebuchet MS", "Times New Roman", Times, serif !default;
+
+/* 2. font-size
+// ==========================================================================
+*/
+$font-size-tiny: 12px !default;
+$font-size-xsmall: 14px !default;
+$font-size-small: 16px !default;
+$font-size-medium: 20px !default;
+$font-size-large: 30px !default;
+$font-size-extra-large: 40px !default;
+$font-size-mega-large: 65px !default;
+
+/* 3. font-weight
+// ==========================================================================
+*/
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: bold;
+
+$font-leading-light: 20px;
+$font-leading-normal: 24px;
+$font-leading-medium: 26px;
+$font-leading-medium: 26px;
+$font-leading-large: 34px;

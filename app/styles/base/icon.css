@@ -1,0 +1,97 @@
+
+.icon-arrow-left:before {
+	content: "\E001";
+}
+
+.icon-arrow-right:before {
+	content: "\E002";
+}
+
+.icon-badge:before {
+	content: "\E003";
+}
+
+.icon-bulb:before {
+	content: "\E004";
+}
+
+.icon-calendar:before {
+	content: "\E005";
+}
+
+.icon-cancel:before {
+	content: "\E006";
+}
+
+.icon-clock:before {
+	content: "\E007";
+}
+
+.icon-cross:before {
+	content: "\E008";
+}
+
+.icon-download:before {
+	content: "\E009";
+}
+
+.icon-facebook:before {
+	content: "\E00A";
+}
+
+.icon-globe:before {
+	content: "\E00B";
+}
+
+.icon-google:before {
+	content: "\E00C";
+}
+
+.icon-lamp:before {
+	content: "\E00D";
+}
+
+.icon-logout:before {
+	content: "\E00E";
+}
+
+.icon-magnifying-glass:before {
+	content: "\E00F";
+}
+
+.icon-menu:before {
+	content: "\E010";
+}
+
+.icon-pencil:before {
+	content: "\E011";
+}
+
+.icon-person:before {
+	content: "\E012";
+}
+
+.icon-pound:before {
+	content: "\E013";
+}
+
+.icon-projects:before {
+	content: "\E014";
+}
+
+.icon-tick:before {
+	content: "\E015";
+}
+
+.icon-twitter:before {
+	content: "\E016";
+}
+
+.icon-upload:before {
+	content: "\E017";
+}
+
+.icon-warning:before {
+	content: "\E018";
+}
+
